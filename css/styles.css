@@ -80,13 +80,19 @@ img {
 .container {
   min-width: 320px;
   max-width: 428px;
-  padding: 0 16px;
+  padding: 0 15px;
   margin-left: auto;
   margin-right: auto;
 
   outline: 2px solid red;
   outline-offset: -2px;
 }
+
+/* @media only screen and (min-width: 428px) {
+  .container {
+    max-width: 428px;
+  }
+} */
 
 @media only screen and (min-width: 768px) {
   .container {
@@ -599,10 +605,15 @@ body {
   margin-right: auto;
   margin-left: auto;
 
-  column-gap: 16px;
-  row-gap: 72px;
+  row-gap: 16px;
 }
 
+@media only screen and (min-width: 428px) {
+  .list-customers {
+    column-gap: 16px;
+    row-gap: 72px;
+  }
+}
 /* @media only screen and (min-width: 768px) {
   .customers {
     max-width: 736px;
@@ -868,7 +879,7 @@ body {
 } */
 
 .footer-form-input {
-  width: 398px;
+  width: 264px;
   height: 40px;
 
   padding-left: 16px;
@@ -884,13 +895,14 @@ body {
   color: var(--white);
   background-color: transparent;
 }
-
+@media only screen and (min-width: 428px) and (max-width: 768px) {
+  .footer-form-input {
+    width: 398px;
+  }
+}
 @media only screen and (min-width: 768px) {
   .footer-form-input {
     text-align: left;
-  }
-  .footer-form-input {
-    width: 264px;
   }
 }
 
@@ -954,7 +966,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
 
-  width: 392px;
+  width: 290px;
   min-height: 584px;
   padding: 24px;
 
@@ -964,6 +976,13 @@ body {
   border-radius: 4px;
 
   transition: transform var(--anim-slow);
+}
+
+@media only screen and (min-width: 428px) {
+  .modal {
+    width: 392px;
+    left: 50%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -1360,9 +1379,15 @@ textarea {
 
 .mobile-contacts-tel {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
 
   color: var(--iris);
+}
+
+@media only screen and (min-width: 428px) {
+  .mobile-contacts-tel {
+    font-size: 36px;
+  }
 }
 
 .mobile-contacts-mail {
@@ -1375,5 +1400,11 @@ textarea {
 
 .menu-socials {
   display: flex;
-  gap: 56px;
+  gap: 28px;
+}
+
+@media only screen and (min-width: 428px) {
+  .menu-socials {
+    gap: 56px;
+  }
 }
