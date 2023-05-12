@@ -228,13 +228,7 @@ body {
 
 /* contact */
 .contact-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: end;
-  gap: 12px;
-
-  padding-right: 0;
+  font-size: 12px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -248,6 +242,10 @@ body {
     flex-wrap: wrap;
     gap: 40px;
   }
+}
+
+.header-contact {
+  margin-bottom: 12px;
 }
 
 .contact .link {
@@ -459,6 +457,11 @@ body {
 
   color: var(--navy-blue);
 }
+@media screen and (max-width: 1157px) {
+  .advantages-list .text {
+    font-weight: 500;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .advantages-item {
@@ -520,7 +523,6 @@ body {
 
 .team {
   background-color: var(--cloud-bg-cl);
-  padding-bottom: 0;
 }
 
 .team-item {
@@ -536,8 +538,6 @@ body {
   gap: 72px;
   text-align: center;
   justify-content: center;
-
-  padding-bottom: 96px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -778,8 +778,6 @@ body {
   padding: 0;
 }
 
-/* Форма как была */
-
 .fotter-form-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -882,8 +880,9 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
 
+  width: 100%;
   width: 290px;
-  min-height: 584px;
+
   padding: 24px;
 
   background-color: var(--dairy-bg-cl);
@@ -897,13 +896,20 @@ body {
 @media only screen and (min-width: 428px) {
   .modal {
     width: 392px;
-    left: 50%;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .modal {
     width: 408px;
+  }
+}
+
+@media screen and (max-width: 1157px) {
+  .modal {
+    overflow: auto;
+    max-height: 584px;
+    height: 100%;
   }
 }
 
@@ -1203,6 +1209,8 @@ textarea {
 
   display: flex;
   flex-direction: column;
+
+  overflow: scroll;
 
   width: 100vw;
   height: 100vh;
