@@ -92,8 +92,8 @@ img {
   margin-left: auto;
   margin-right: auto;
 
-  outline: 2px solid red;
-  outline-offset: -2px;
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
 }
 
 @media only screen and (min-width: 768px) {
@@ -231,6 +231,10 @@ body {
   font-size: 12px;
 }
 
+.header-contact {
+  margin-bottom: 12px;
+}
+
 @media only screen and (max-width: 767px) {
   .contact-list {
     display: none;
@@ -239,13 +243,14 @@ body {
 
 @media only screen and (min-width: 1158px) {
   .contact-list {
+    display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 40px;
   }
-}
-
-.header-contact {
-  margin-bottom: 12px;
+  .header-contact {
+    margin-bottom: 0;
+  }
 }
 
 .contact .link {
