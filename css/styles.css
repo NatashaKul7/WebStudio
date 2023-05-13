@@ -227,8 +227,10 @@ body {
 }
 
 /* contact */
-.contact-list {
-  font-size: 12px;
+@media only screen and (max-width: 1157px) {
+  .contact-list {
+    font-size: 12px;
+  }
 }
 
 .header-contact {
@@ -247,6 +249,8 @@ body {
     flex-wrap: wrap;
     align-items: center;
     gap: 40px;
+
+    /* font-size: 16px; */
   }
   .header-contact {
     margin-bottom: 0;
@@ -419,10 +423,8 @@ body {
 
 /* advantages / team */
 
-.advantages-container {
+.advantages-top-container {
   display: none;
-  align-items: center;
-  justify-content: center;
 
   height: 112px;
   background-color: var(--cloud-bg-cl);
@@ -431,27 +433,42 @@ body {
   padding: 24px 100px;
 }
 
-.advantages-top-list {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-}
 @media only screen and (min-width: 1158px) {
-  .advantages-container {
+  .advantages-top-container {
     display: flex;
   }
 }
 
-.advantages-list {
+.advantages-top-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 72px 24px;
-
-  padding-left: 0;
+  gap: 72px;
 }
 
-.advantages-item .title {
+@media only screen and (min-width: 768px) {
+  .advantages-top-list {
+    display: flex;
+    flex-wrap: nowrap;
+
+    gap: 72px 24px;
+
+    /* max-width: calc((100% - 24px) / 2); */
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .advantages-top-list {
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .advantages-top-item {
+    width: 356px;
+  }
+}
+
+.advantages-top-list .title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -462,35 +479,24 @@ body {
 
   color: var(--navy-blue);
 }
-@media screen and (max-width: 1157px) {
-  .advantages-list .text {
-    font-weight: 500;
-  }
-}
 
-@media screen and (min-width: 768px) {
-  .advantages-item {
-    max-width: calc((100% - 24px) / 2);
-  }
-  .advantages-item .title {
+@media only screen and (min-width: 768px) {
+  .advantages-top-list .title {
     text-align: start;
   }
 }
 
 @media only screen and (min-width: 1158px) {
-  .advantages-item {
-    width: calc((100% - 72px) / 4);
-  }
-}
-
-@media only screen and (min-width: 1158px) {
-  .advantages-item .title {
+  .advantages-top-list .title {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
+  }
+}
 
-    color: var(--navy-blue);
-    margin-bottom: 8px;
+@media screen and (max-width: 1157px) {
+  .advantages-top-list .text {
+    font-weight: 500;
   }
 }
 
