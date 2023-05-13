@@ -448,7 +448,7 @@ body {
 @media only screen and (min-width: 768px) {
   .advantages-top-list {
     display: flex;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
 
     gap: 72px 24px;
 
